@@ -1,0 +1,119 @@
+{
+  "withdrawn": {
+
+  },
+  "post-application": {
+
+  },
+  "parameters": [
+    {
+      "value": "tests",
+      "id": "test",
+      "title": "test",
+      "description": "test"
+    }
+  ],
+  "pre-application": {
+    "intro": {
+      "messages": [
+
+      ]
+    },
+    "type": "normal"
+  },
+  "copy-withdraw-structure": {
+    "other_options": [
+
+    ]
+  },
+  "in-application": {
+    "assessments": [
+      {
+        "content": {
+          "3": [
+            {
+              "0": {
+                "options": [
+                  {
+                    "text": "I can join immediately",
+                    "type": "text"
+                  },
+                  {
+                    "text": "1 month",
+                    "type": "text"
+                  },
+                  {
+                    "text": "2 months",
+                    "type": "text"
+                  },
+                  {
+                    "text": "More than 2 months",
+                    "type": "text"
+                  }
+                ],
+                "topic": "How long is your notice period?",
+                "type": "choice",
+                "sensitive": true
+              }
+            },
+            {
+              "1": {
+                "type": "long-text",
+                "topic": "<p>Please give me an example of a time when you had to solve a problem. Describe the problem, and then describe the steps you took to solve it. Was this the best way to solve the problem? Why or why not?</p>",
+                "duration": "300",
+                "sensitive": true
+              }
+            },
+            {
+              "2": {
+                "flow-influencer-match-type": "ifequal",
+                "flow-influencer": true,
+                "topic": "To get a better idea on your level of experience, could you please tell me how many years of relevant professional experience you have in Test Automation?",
+                "identifier-description": "Experience rejection",
+                "type": "choice",
+                "flow-influencer-type": "exit-interview-rejected",
+                "flow-influencer-match": "Less than 2 years",
+                "options": [
+                  {
+                    "text": "Less than 2 years",
+                    "type": "text"
+                  },
+                  {
+                    "text": "2 - 5 years",
+                    "type": "text"
+                  },
+                  {
+                    "text": "5 - 8 years",
+                    "type": "text"
+                  },
+                  {
+                    "text": "8 - 10 years or more",
+                    "type": "text"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "start_section_message": "Start now!",
+        "title": "In this section i will be asking you some questions to get to know you better",
+        "contentType": "general-questions",
+        "short-title": "In this section i will be asking you some questions to get to know you better"
+      },
+      {
+        "content": {
+          "resume_required": {
+            "compulsory-fields": [
+
+            ],
+            "optional": false,
+            "required": true
+          }
+        },
+        "title": "Please upload your Resume in DOC, DOCX or PDF format.",
+        "contentType": "resume-section",
+        "short-title": "Please upload your Resume in DOC, DOCX or PDF format."
+      }
+    ]
+  }
+}
